@@ -73,4 +73,8 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  code {
+    @apply bg-ring text-destructive rounded-md;
+  }
 }
