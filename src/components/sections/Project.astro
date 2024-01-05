@@ -1,0 +1,57 @@
+---
+import ProjectCard from "@/components/ProjectCard";
+
+const project = [
+  {
+    title: "OnlyTrade: Microservice Project",
+    description:
+      "Developed a Fullstack Ecommerce Website using Codeigniter 4 for the Frontend and Backend of the systems",
+    image: "/images/onlytrade.png",
+    year: "2023",
+    github: "https://github.com/DiziASP/OnlyTrade-Single-Service",
+  },
+  {
+    title: "API Performance Dashboard",
+    description:
+      "Developed a Performance Dashboard and Testing for an API Server using Prometheus, Grafana, and K6 using Docker",
+    image: "/images/api.png",
+    year: "2023",
+    github: "https://github.com/DiziASP/tubes-apks-2023",
+  },
+  {
+    title: "GasBall: Software Enginerring IST Final Task",
+    description:
+      "Developed a Full-stack Field Management Website using NextJS and Supabase; Created more than 12 functionalities on the frontend application",
+    image: "/images/gasball.png",
+    year: "2023",
+    github: "https://github.com/DiziASP/gasball-deploy",
+  },
+  {
+    title: "Rakata Website",
+    description:
+      "Developed a Portfolio Website using NextJS and TailwindCSS; Created more than 10 functionalities on the frontend application",
+    image: "/images/rakata.png",
+    year: "2023",
+    demo: "https://rakata.vercel.app/",
+  },
+];
+---
+
+<section
+  class="flex flex-col w-full gap-6 justify-center py-24 md:px-24"
+  id="projects"
+>
+  <div class="items-center justify-between w-full flex flex-row space-x-6">
+    <h2 class="text-3xl text-center md:text-5xl font-semibold">
+      <span class="text-2xl font-normal">02.</span>
+      Projects<span class="dark:text-violet-400 text-violet-600 animate-pulse"
+        >.</span
+      >
+    </h2>
+    <hr class="flex-grow border-2 border-accent" />
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {project.map((item) => <ProjectCard {...item} />)}
+  </div>
+</section>

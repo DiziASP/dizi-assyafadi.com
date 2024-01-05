@@ -1,0 +1,63 @@
+---
+import { InstagramIcon, LinkedinIcon, Mail } from "lucide-react";
+
+const links = [
+  {
+    title: "dizi.assyafadi.p@gmail.com",
+    url: "mailto:dizi.assyafadi.p@gmail.com",
+    icon: Mail,
+  },
+  {
+    title: "in/radendiziap/",
+    url: "https://www.linkedin.com/in/radendiziap/",
+    icon: LinkedinIcon,
+  },
+  {
+    title: "radendzzi_",
+    url: "https://www.instagram.com/radendzzi_",
+    icon: InstagramIcon,
+  },
+];
+---
+
+<section class="flex flex-col w-full gap-6 justify-center" id="experiences">
+  <div class="items-center justify-between w-full flex flex-row space-x-6">
+    <h2 class="text-3xl text-center md:text-5xl font-semibold">
+      <span class="text-2xl font-normal">03.</span>
+      Contact<span class="dark:text-teal-400 text-teal-600 animate-pulse"
+        >.</span
+      >
+    </h2>
+    <hr class="flex-grow border-2 border-accent" />
+  </div>
+
+  <!-- Content -->
+  <div class="flex flex-col space-y-6">
+    <p class="text-lg max-w-[960px]">
+      I'm currently looking for new opportunities, my inbox is always open. You
+      can contact me through Email or Social Media. Whether you have an offer,
+      question or just want to say hi, I'll try my best to get back to you!
+    </p>
+    <!-- <div class="flex flex-col space-y-2">
+      <h3 class="text-xl font-semibold">Email</h3>
+      <p class="text-lg font-light">
+        <a href="mailto:dizi.assyafadi.p@gmail.com"> </a>
+      </p>
+    </div> -->
+    <div class={`flex flex-col gap-4`}>
+      {
+        links.map((link) => (
+          <a
+            title={link.title}
+            href={link.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            class="flex flex-row items-center gap-2 text-lg font-semibold"
+          >
+            <link.icon size={24} className="hover:scale-110" /> {link.title}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
