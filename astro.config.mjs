@@ -10,6 +10,6 @@ export default defineConfig({
   integrations: [react(), tailwind({
     applyBaseStyles: false
   })],
-  output: "server",
+  output: "hybrid",
   adapter: vercel()
 });
