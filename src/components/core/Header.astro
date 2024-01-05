@@ -9,9 +9,6 @@ import { menuLinks } from "@/lib/site.config";
 >
   <div class="flex items-center space-x-4 py-4 sm:justify-between sm:space-x-0">
     <div class="flex gap-6 md:gap-10">
-      <!-- <a href="/" class="flex items-center space-x-2">
-        <span class="inline-block font-bold">Home</span>
-      </a> -->
       {
         menuLinks.map((link) => (
           <a
@@ -19,21 +16,15 @@ import { menuLinks } from "@/lib/site.config";
             class="flex items-center space-x-2"
             class={buttonVariants({ variant: "ghost" })}
           >
-            <span class="inline-block font-bold">{link.title}</span>
+            <span class="inline-block font-bold hover:underline duration-500">
+              {link.title}
+            </span>
           </a>
         ))
       }
     </div>
     <div class="flex flex-1 items-center justify-end space-x-4">
       <nav class="flex items-center space-x-1">
-        <!-- <a
-          href="https://github.com/AREA44/astro-shadcn-ui-template"
-          target="_blank"
-          rel="noreferrer"
-          class={buttonVariants({ variant: "ghost" })}
-        >
-          GitHub
-        </a> -->
         <ThemeToggle />
       </nav>
     </div>

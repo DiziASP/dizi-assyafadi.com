@@ -1,32 +1,10 @@
 ---
-const experiences = [
-  {
-    position: "Project Manager",
-    organization: `Inkubator IT HMIF ITB`,
-    period: "December 2022 - Present",
-    description: [
-      "Managed a project of creating ticket sales tracking website and mobile with total valuation of Rp25 million rupiah as a new project manager",
-      "Worked with 3 programmers and 1 UI/UX designer to develop the website and mobile application in 4 months",
-    ],
-    // image: GFF,
-    location: "Bandung, Indonesia",
-  },
-  {
-    position: "Software Engineer",
-    organization: `Arkavidia HMIF ITB`,
-    period: "November 2022 - March 2023",
-    description: [
-      "Developed 20+ user interfaces responsive and accessible progressive web application from designs and wireframes using Next.JS with TypeScript and TailwindCSS; Increased total application number by 30% from initial target",
-      "Worked with 12 members of developers to develop an integrated web application; Decreased development time to 4 months ",
-    ],
-    // image: GFF,
-    location: "Bandung, Indonesia",
-  },
-];
+import { experiences } from "@/lib/site.config";
+import Reveal from "@/components/Reveal";
 ---
 
 <section
-  class="flex flex-col w-full gap-6 justify-center my-24"
+  class="flex flex-col w-full gap-6 justify-center py-24"
   id="experiences"
 >
   <div class="items-center justify-between w-full flex flex-row space-x-6">
@@ -44,32 +22,40 @@ const experiences = [
   <div class="overflow-hidden flex flex-col gap-12 md:px-[2.7rem]">
     {
       experiences.map((journey, idx) => (
-        <div class="flex flex-col justify-center">
+        <div class="flex flex-col gap-4 justify-center">
           <div class="flex flex-col">
-            <p class="font-semibold text-2xl md:text-3xl my-2 text-sky-500">
-              {journey.organization}
-            </p>
-            <p class="font-normal text-sm md:text-xl my-2">{journey.period}</p>
+            <Reveal client:visible>
+              <p class="font-extrabold text-2xl md:text-3xl text-sky-500">
+                {journey.position}
+              </p>
+            </Reveal>
+            <Reveal client:visible>
+              <p class="font-normal text-sm md:text-xl ">{journey.period}</p>
+            </Reveal>
           </div>
           <div class="flex flex-row items-center justify-between">
-            <p class="font-semibold text-lg md:text-xl my-2 text-left text-sky-400">
-              {journey.position}
-            </p>
+            <Reveal client:visible>
+              <p class="font-semibold text-lg md:text-xl text-left text-teal-500 bg-muted/50">
+                {journey.organization}
+              </p>
+            </Reveal>
 
-            <p class="font-semibold text-lg md:text-xl my-2 text-right">
-              {journey.location}
-            </p>
+            <Reveal client:visible>
+              <p class="font-semibold text-lg md:text-xl text-right">
+                {journey.location}
+              </p>
+            </Reveal>
           </div>
           {Array.isArray(journey.description) ? (
             <ul class="list-disc list-inside max-w-[1000px] text-justify">
               {journey.description.map((desc, idx) => (
-                <li class="font-normal text-sm md:text-xl my-2">{desc}</li>
+                <Reveal client:visible>
+                  <li class="font-normal text-sm md:text-xl ">{desc}</li>
+                </Reveal>
               ))}
             </ul>
           ) : (
-            <p class="font-normal text-sm md:text-xl my-2">
-              {journey.description}
-            </p>
+            <p class="font-normal text-sm md:text-xl ">{journey.description}</p>
           )}
         </div>
       ))

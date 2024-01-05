@@ -1,40 +1,7 @@
 ---
 import ProjectCard from "@/components/ProjectCard";
-
-const project = [
-  {
-    title: "OnlyTrade: Microservice Project",
-    description:
-      "Developed a Fullstack Ecommerce Website using Codeigniter 4 for the Frontend and Backend of the systems",
-    image: "/images/onlytrade.png",
-    year: "2023",
-    github: "https://github.com/DiziASP/OnlyTrade-Single-Service",
-  },
-  {
-    title: "API Performance Dashboard",
-    description:
-      "Developed a Performance Dashboard and Testing for an API Server using Prometheus, Grafana, and K6 using Docker",
-    image: "/images/api.png",
-    year: "2023",
-    github: "https://github.com/DiziASP/tubes-apks-2023",
-  },
-  {
-    title: "GasBall: Software Enginerring IST Final Task",
-    description:
-      "Developed a Full-stack Field Management Website using NextJS and Supabase; Created more than 12 functionalities on the frontend application",
-    image: "/images/gasball.png",
-    year: "2023",
-    github: "https://github.com/DiziASP/gasball-deploy",
-  },
-  {
-    title: "Rakata Website",
-    description:
-      "Developed a Portfolio Website using NextJS and TailwindCSS; Created more than 10 functionalities on the frontend application",
-    image: "/images/rakata.png",
-    year: "2023",
-    demo: "https://rakata.vercel.app/",
-  },
-];
+import { project } from "@/lib/site.config";
+import Reveal from "@/components/Reveal";
 ---
 
 <section
@@ -52,6 +19,12 @@ const project = [
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {project.map((item) => <ProjectCard {...item} />)}
+    {
+      project.map((item) => (
+        <Reveal client:visible>
+          <ProjectCard {...item} />
+        </Reveal>
+      ))
+    }
   </div>
 </section>

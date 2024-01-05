@@ -14,6 +14,7 @@ const ProjectCard: React.FC<{
   title: string;
   year: string;
   description: string;
+  tech?: string[];
   github?: string;
   demo?: string;
   image?: string;
@@ -22,6 +23,7 @@ const ProjectCard: React.FC<{
   year,
   image,
   description,
+  tech,
   github,
   demo,
 }: {
@@ -29,22 +31,35 @@ const ProjectCard: React.FC<{
   description: string;
   image?: string;
   year: string;
+  tech?: string[];
   github?: string;
   demo?: string;
 }) => {
   return (
     <Card className="hover:scale-110 duration-300">
       <CardHeader>
-        <p className="text-center lg:text-start text-fuchsia-600 dark:text-fuchsia-400">
+        <p
+          className={`text-center font-extrabold lg:text-start ${
+            year >= "2023"
+              ? "text-violet-600 dark:text-violet-400"
+              : "text-amber-600 dark:text-amber-400"
+          }`}
+        >
           {year}
         </p>
         <CardTitle className="text-center lg:text-start">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-3">
         <img src={image} className="h-48 rounded-sm" alt="" />
-        <CardDescription className="text-center lg:text-start">
+        <CardDescription className="text-base text-center lg:text-justify">
           {description}
         </CardDescription>
+        {tech && (
+          <p className="text-sm">
+            <strong>Made using: </strong>
+            {tech?.join(", ")}
+          </p>
+        )}
       </CardContent>
       <CardFooter className="flex flex-row gap-2 justify-center lg:justify-normal">
         {github && (
@@ -57,7 +72,7 @@ const ProjectCard: React.FC<{
         {demo && (
           <a href={demo}>
             <Button size="sm" variant="outline" className="gap-1">
-              Demo
+              Live Website
             </Button>
           </a>
         )}
