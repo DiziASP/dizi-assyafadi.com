@@ -74,7 +74,7 @@ export const project = [
     title: "Arkavidia 8.0 Website",
     description:
       "This project is the official website for Arkavidia 8.0, an annual IT Competition held by HMIF ITB. I developed the website using NextJS with TypeScript and TailwindCSS. I also developed the website's admin panel using ReactJS and TailwindCSS. There is no picture provided since the event is already completed and the website has already been taken down",
-    image: "https://placehold.co/314x192/webp?text=No%20Image",
+    image: "https://placehold.co/319x169/webp?text=No%20Image",
     tech : ["NextJS", "TailwindCSS"],
     year: "2022",
     github: "https://github.com/arkavidia-hmif/arkavidia-frontend-8.0"

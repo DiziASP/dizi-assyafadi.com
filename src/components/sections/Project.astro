@@ -2,6 +2,7 @@
 import ProjectCard from "@/components/ProjectCard";
 import { project } from "@/lib/site.config";
 import Reveal from "@/components/Reveal";
+import ProjectCard2 from "../ProjectCard2.astro";
 ---
 
 <section
@@ -22,7 +23,7 @@ import Reveal from "@/components/Reveal";
     {
       project.map((item) => (
         <Reveal client:visible>
-          <ProjectCard {...item} />
+          <ProjectCard2 {...item} />
         </Reveal>
       ))
     }

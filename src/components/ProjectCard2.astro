@@ -1,0 +1,76 @@
+---
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { LucideGithub } from "lucide-react";
+
+import { Image } from "astro:assets";
+
+type Props = {
+  title: string;
+  year: string;
+  description: string;
+  tech?: string[];
+  github?: string;
+  demo?: string;
+  image?: string;
+};
+
+const { title, year, description, tech, github, demo, image } = Astro.props;
+---
+
+<Card className="hover:scale-110 duration-300">
+  <CardHeader>
+    <p
+      class={`text-center font-extrabold lg:text-start ${
+        year >= "2023"
+          ? "text-violet-600 dark:text-violet-400"
+          : "text-amber-600 dark:text-amber-400"
+      }`}
+    >
+      {year}
+    </p>
+    <CardTitle className="text-center lg:text-start">{title}</CardTitle>
+  </CardHeader>
+  <CardContent className="flex flex-col gap-3">
+    <!-- <img src={image} class="h-48 rounded-sm" alt="" /> -->
+    <Image src={image!} alt="descriptive text" width={480} height={192} />
+    <CardDescription className="text-sm lg:text-base font-medium text-justify">
+      {description}
+    </CardDescription>
+    {
+      tech && (
+        <p class="text-sm">
+          <strong>Made using: </strong>
+          {tech?.join(", ")}
+        </p>
+      )
+    }
+  </CardContent>
+  <CardFooter className="flex flex-row gap-2 justify-center lg:justify-normal">
+    {
+      github && (
+        <a href={github}>
+          <Button size="sm" className="gap-1">
+            Github <LucideGithub size={16} />
+          </Button>
+        </a>
+      )
+    }
+    {
+      demo && (
+        <a href={demo}>
+          <Button size="sm" variant="outline" className="gap-1">
+            Live Website
+          </Button>
+        </a>
+      )
+    }
+  </CardFooter>
+</Card>

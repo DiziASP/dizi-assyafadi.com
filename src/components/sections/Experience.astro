@@ -47,13 +47,13 @@ import Reveal from "@/components/Reveal";
             </Reveal>
           </div>
           {Array.isArray(journey.description) ? (
-            <ul class="list-disc list-inside max-w-[1000px] text-justify">
-              {journey.description.map((desc, idx) => (
-                <Reveal client:visible>
+            <Reveal client:visible>
+              <ul class="list-disc list-inside max-w-[1000px] text-justify">
+                {journey.description.map((desc, idx) => (
                   <li class="font-normal text-sm md:text-xl ">{desc}</li>
-                </Reveal>
-              ))}
-            </ul>
+                ))}
+              </ul>
+            </Reveal>
           ) : (
             <p class="font-normal text-sm md:text-xl ">{journey.description}</p>
           )}
