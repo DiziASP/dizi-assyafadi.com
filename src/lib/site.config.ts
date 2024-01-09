@@ -22,9 +22,9 @@ export const experiences = [
     organization: `Inkubator IT HMIF ITB`,
     period: "December 2022 - Present",
     description: [
-      "Responsible for gathering requirements, creating project and budget plan, and managing project's developer team ",
-      "Managed a project of creating ticket sales tracking website and mobile with total valuation of Rp25 million rupiah as a new project manager",
-      "Worked with 3 programmers and 1 UI/UX designer to develop the website and mobile application in 4 months",
+      "Entrusted to tackle IT-based project by eliciting project requirements and assembling a development team to execute the project within scope, budget, and set timelines",
+      "Managed a ticket sales tracker website and mobile application project with total valuation of Rp25 million rupiah; Worked with 3 programmers and 1 UI/UX designer for 4 months",
+      "Contributed to more than 25% of Inkubator IT HMIF's projects spanning from final year tasks to complex Machine Learning models.",
     ],
     location: "Bandung, Indonesia",
   },
@@ -33,9 +33,10 @@ export const experiences = [
     organization: `Arkavidia HMIF ITB`,
     period: "November 2022 - March 2023",
     description: [
-      "Responsible for developing Arkavidia 8.0's Frontend using NextJS with TypeScript and TailwindCSS" ,
-      "Developed 20+ user interfaces responsive and accessible progressive web application from established UI designs and wireframes",
-      "Worked with 12 members of developers to develop an integrated web application for Arkavidia 8.0",
+
+    "Developed 20+ responsive and accessible user interfaces for Arkavidia's progressive web application using NextJS",
+    "Successfully increased the total user of the application by 30% from initial target and decreased development time to 4 months",
+    "Spearheaded the creation of admin and merchandise pages of the application, leveraged NextJS SSR feature to deliver responsive and feature-rich web pages.",
     ],
     location: "Bandung, Indonesia",
   },
