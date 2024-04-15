@@ -3,40 +3,50 @@ import { InstagramIcon, LinkedinIcon, Mail, LucideGithub } from "lucide-react";
 
 export const menuLinks: Array<{ title: string; path: string }> = [
   {
-  	title: "Experiences",
-  	path: "#experiences",
+    title: "Experiences",
+    path: "#experiences",
   },
   {
-  	title: "Projects",
-  	path: "#projects",
+    title: "Projects",
+    path: "#projects",
   },
   {
-  	title: "Contact",
-  	path: "#contact",
+    title: "Contact",
+    path: "#contact",
   },
 ];
 
 export const experiences = [
   {
-    position: "Project Manager",
-    organization: `Inkubator IT HMIF ITB`,
-    period: "December 2022 - Present",
+    position: "Cloud Computing Cohort",
+    organization: `Bangkit Academy 2024`,
+    period: "February 2024 - Present",
     description: [
-      "Entrusted to tackle IT-based project by eliciting project requirements and assembling a development team to execute the project within scope, budget, and set timelines",
-      "Managed a ticket sales tracker website and mobile application project with total valuation of Rp25 million rupiah; Worked with 3 programmers and 1 UI/UX designer for 4 months",
-      "Contributed to more than 25% of Inkubator IT HMIF's projects spanning from final year tasks to complex Machine Learning models.",
+      "Completed basics of applications deployment & monitoring, and managing enterprise solutions on Google Cloud Platform in 6 weeks.",
+      "Accomplished 20+ Google Qwiklabs Lab on Google Cloud Skillboost in 2 months with Overall Score of 100%",
+      "Spearheaded the capstone and outlined 10+ requirements for a sustainable lifestyle mobile app, aimed for June 2024.",
+    ],
+    location: "Remote",
+  },
+  {
+    position: "Backend Engineer Intern",
+    organization: `Haquhara`,
+    period: "January - April 2024",
+    description: [
+      "Pioneered Haquhara's Internal Dashboard Backend development using NextJS with PostgreSQL, Prisma, and tRPC; Improved 60% data accessibility and reduced 50% interdepartmental communication delay.",
+      "Enhanced 40% of query processing in data analysis workflows, measured by overall loading time, by leveraging advanced SQL (Window Function & Triggers).",
+      "Collaborated with 2 developers and 1 UI/UX Designer, achieving 3 sprint targets and 15 features in 3 months",
     ],
     location: "Bandung, Indonesia",
   },
   {
-    position: "Software Engineer",
-    organization: `Arkavidia HMIF ITB`,
-    period: "November 2022 - March 2023",
+    position: "Project Manager",
+    organization: `Inkubator IT HMIF ITB`,
+    period: "December 2022 - April 2024",
     description: [
-
-    "Developed 20+ responsive and accessible user interfaces for Arkavidia's progressive web application using NextJS",
-    "Successfully increased the total user of the application by 30% from initial target and decreased development time to 4 months",
-    "Spearheaded the creation of admin and merchandise pages of the application, leveraged NextJS SSR feature to deliver responsive and feature-rich web pages.",
+      "Entrusted to tackle IT-based project by eliciting project requirements and assembling a development team to execute the project within scope, budget, and set timelines",
+      "Managed a ticket sales tracker website and mobile application project with total valuation of Rp25 million rupiah; Worked with 3 programmers and 1 UI/UX designer for 4 months",
+      "Contributed to more than 25% of Inkubator IT HMIF's projects spanning from final year tasks to complex Machine Learning models.",
     ],
     location: "Bandung, Indonesia",
   },
@@ -76,9 +86,9 @@ export const project = [
     description:
       "This project is the official website for Arkavidia 8.0, an annual IT Competition held by HMIF ITB. I developed the website using NextJS with TypeScript and TailwindCSS. I also developed the website's admin panel using ReactJS and TailwindCSS. There is no picture provided since the event is already completed and the website has already been taken down",
     image: "https://placehold.co/319x169/webp?text=No%20Image",
-    tech : ["NextJS", "TailwindCSS"],
+    tech: ["NextJS", "TailwindCSS"],
     year: "2022",
-    github: "https://github.com/arkavidia-hmif/arkavidia-frontend-8.0"
+    github: "https://github.com/arkavidia-hmif/arkavidia-frontend-8.0",
   },
   {
     title: "Rakata Website",
