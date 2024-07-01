@@ -13,9 +13,12 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "1.5rem",
-      screens: {
-        "2xl": "1200px",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
     },
     extend: {
@@ -60,7 +63,7 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Lato", ...fontFamily.sans],
+        sans: ["Product Sans", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
